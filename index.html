@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Edit Me!!</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    
+    <!-- Syntaxhighlighter 
+    <script src="plugin/syntaxhighlighter/scripts/shCore.js"></script>
+    <script src="plugin/syntaxhighlighter/scripts/shBrushAll.js"></script>
+    <link type="text/css" rel="stylesheet" href="plugin/syntaxhighlighter/styles/shCoreDefault.css"/>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    -->
+    
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+  
+<div class="reveal">
+  <div class="slides">
+    <section data-markdown data-separator="^\n---$" data-vertical="^\n>>>$">
+      <script type="text/tempalte">
+        #test
+        
+        ---
+        #Page1
+        
+<!--
+<pre class="brush: js; class-name: font-6">
+        module.exports = function(grunt) {
+          // config
+          grunt.initConfig({
+            uglify: {
+              build: {
+               src: 'src/main/js/**/*.js',
+               dest: 'build/js/app.min.js'
+              }
+            },
+            watch: {
+              build: {
+               files: '<%=uglify.build.dest%>',
+               tasks: ['uglify']
+              }
+            }
+          });
+
+          // plugin
+          grunt.loadNpmTasks('grunt-contrib-uglify');
+          grunt.loadNpmTasks('grunt-contrib-watch');
+
+          // tasks
+          grunt.registerTask('default', ['uglify', 'watch']);
+        };
+</pre>
+-->
+        
+        >>>
+        #Vertical Page
+      
+      </script>
+    </section>
+  </div>
+</div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+    <script src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>
